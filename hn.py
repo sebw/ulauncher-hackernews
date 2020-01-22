@@ -59,6 +59,7 @@ class HN:
         # Check if all the stories have been returned 
 
         all_top_stories.sort()
+        print(all_top_stories)
         all_top_stories = map(lambda x: x[1], all_top_stories)
         for page in utils.chunks(all_top_stories, items_per_page):
             pages.append(page)
